@@ -3,7 +3,6 @@ import { loadData } from "./getData.js";
 
 export const setTrack = async (player, playList, indexCurrrent) => {
   if (!playList.length) {
-    player.src = "";
     return;
   }
 
