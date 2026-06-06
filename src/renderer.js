@@ -30,7 +30,6 @@ import { selectPLayList } from "./renderer/SelectItemPlaylist.js";
   export const previousBtn = document.getElementById("previousBtn");
   export const repeatBtn = document.getElementById("repeatBtn") 
   export const repeatText = document.getElementById("repeatText") 
-  
 
   export const list = [];
 

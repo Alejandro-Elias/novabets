@@ -6,5 +6,12 @@ export const updateActiveTrack = () => {
     tracks.forEach((track, index) => {
         track.classList.toggle("active", index === indexCurrent);
         
-    });
+    });    
+
+    const active = document.querySelector(".active") 
+
+    active?.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    })
 }

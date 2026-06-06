@@ -1,5 +1,4 @@
 import { player } from "../../../renderer.js";
-import { setCurrent } from "../../currentTrack.js";
 import { listaNueva, setListaNueva } from "../../folder.js";
 import { loadData } from "../../getData.js";
 import {
@@ -20,7 +19,6 @@ export const setRepeatCondition = (condition) => {
 
 export const nextTrack = () => {
   const next = () => {
-    
     if (listaNueva) {
       setListaNueva(false);
       updateActiveTrack();
@@ -42,7 +40,7 @@ export const nextTrack = () => {
       }
     }
 
-    setTrack(player, playList, indexCurrent)
+    setTrack(player, playList, indexCurrent);
     player.play();
   };
 
@@ -55,4 +53,10 @@ export const nextTrack = () => {
     if (!playList || playList.length === 0) return;
     next();
   });
+
+  if ("mediaSession" in navigator) {
+    navigator.mediaSession.setActionHandler("nexttrack", () => {
+      next();
+    });
+  }
 };

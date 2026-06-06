@@ -6,7 +6,8 @@ import { updateActiveTrack } from "../../resaltarTrack.js";
 import { playList } from "./loadList.js";
 
 export const previousTrack = () => {
-  previousBtn.addEventListener("click", () => {
+
+  const previous = () => {
     if (indexCurrent > 0) {
       previousIndex();
     }
@@ -19,5 +20,14 @@ export const previousTrack = () => {
     setCurrent({ path: currentPlay });
     loadData();
     player.play();
+  }
+
+  previousBtn.addEventListener("click", () => {
+    previous()
   });
+   if ("mediaSession" in navigator) {
+    navigator.mediaSession.setActionHandler("previoustrack", () => {
+      previous();
+    });
+  }
 };
