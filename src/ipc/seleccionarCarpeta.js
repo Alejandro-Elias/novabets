@@ -1,5 +1,6 @@
 const { ipcMain, dialog, BrowserWindow } = require("electron");
 const fs = require("fs");
+const path = require("path");
 
 let lista = [];
 
@@ -19,16 +20,29 @@ function carpetaALista() {
 
     const carpeta = resultado.filePaths[0];
 
-    const archivos = fs.readdirSync(carpeta);
+    const leerCarpeta = (pathCarpeta) => {
+      const elementos = fs.readdirSync(pathCarpeta, {
+        withFileTypes: true,
+      });
 
-    archivos
-      .filter((archivo) => archivo.endsWith(".mp3"))
-      .forEach((archivo) =>
-        lista.push({
-          carpeta: carpeta,
-          archivo: archivo,
-        }),
-      );
+      for (const elemento of elementos) {
+        const rutaCompleta = path.join(pathCarpeta, elemento.name);
+
+        if (elemento.isDirectory()) {
+          leerCarpeta(rutaCompleta);
+        }
+
+        if (elemento.isFile() && elemento.name.endsWith(".mp3")) {
+          lista.push({
+            carpeta: pathCarpeta,
+            archivo: elemento.name,
+            ruta: rutaCompleta,
+          });
+        }
+      }
+    };
+
+    leerCarpeta(carpeta);
   });
 }
 
