@@ -29,6 +29,8 @@ export const folder = () => {
 
       resetIndex();
 
+      localStorage.setItem("indexCurrent", JSON.stringify(0))
+
       const path = `${playList[indexCurrent].carpeta}/${playList[indexCurrent].archivo}`;
 
       setCurrent({ path: path });

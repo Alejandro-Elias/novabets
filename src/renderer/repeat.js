@@ -9,20 +9,17 @@ export const repeat = () => {
         repeatText.innerHTML = 'ONE'
         repeatBtn.classList.add('repeatActive')
         verificador++
-        console.log(verificador);
         setRepeatCondition('repeat-one')        
         
     } else if (verificador === 1) {
         repeatText.innerHTML = 'ALL'
         verificador++
-        console.log(verificador);
         setRepeatCondition('repeat-all')       
 
     } else if (verificador === 2) {
         repeatText.innerHTML = ''
         repeatBtn.classList.remove('repeatActive')
         verificador = 0
-        console.log(verificador);
         setRepeatCondition('repeat-normal')       
         
     }

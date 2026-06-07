@@ -13,7 +13,7 @@ export const ejecutarPlay = async () => {
   }
 
   if (!player.src || player.src === "") {
-    await setTrack(player, playList, indexCurrent);
+    await setTrack(player, playList, indexCurrent); 
   }
 
   updateActiveTrack();

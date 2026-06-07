@@ -11,10 +11,7 @@ export const mostrarMetadata = () => {
   if (urlImagenActual) {
     URL.revokeObjectURL(urlImagenActual);
     urlImagenActual = null;
-  }
-
-  console.log(metadatos);
-  
+  }  
 
   if (metadatos.metadata.coverBuffer) {
     const blob = new Blob([metadatos.metadata.coverBuffer], { type: metadatos.metadata.mimeType });
