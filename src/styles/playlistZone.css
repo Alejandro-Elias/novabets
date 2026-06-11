@@ -1,0 +1,146 @@
+
+
+.playlistZone {
+    -webkit-app-region: no-drag;
+    grid-column: 9 / 13;
+    grid-row: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+    color: whitesmoke;
+    gap: 10px;
+}
+
+.playListContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.playListContent p {    color: #0075ff;
+
+}
+
+.playList {
+    width: 100%;
+    height: 125px;
+    max-height: 125px;
+    overflow: auto;
+    padding: 2px 5px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 10px;
+
+}
+
+.playList::-webkit-scrollbar {
+    width: 2px;
+}
+
+.playList::-webkit-scrollbar-thumb {
+    background-color: #0075ff;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eliminar {
+    background: transparent;
+}
+
+.eliminarBtn {
+    color: whitesmoke;
+    background: transparent;
+}
+
+.isFolderBtn {
+    width: 25%;
+    background: transparent;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.isFolderBtn:hover {
+    color: #0075ff;
+}
+
+.folder {    
+    font-size: 20px;
+}
+
+.folderText {
+    font-size:16px;
+}
+
+.listBtn {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.active {
+    background-color: #0075ff;
+}
+
+.i-color {
+    color: rgba(0, 117, 255, 0.5);
+}
+
+button i:active {
+    color: rgba(0, 117, 255, 0.5);
+}
+
+.suffleNoActive, .repeat {
+    font-size: 36px;
+}
+
+.suffleActive {
+    color: #0075ff;
+    font-size: 36px;
+}
+
+.repeat-container {
+    position: relative;
+}
+
+.repeat {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.repeatActive {
+    color: #0075ff;
+}  
+
+.one-all {
+    position: absolute;
+    font-size:9px;
+    top: 36%;
+    left: 30%;
+}
+
+.item-playlist  {
+    width: 100%;
+    text-align: start;
+    color: whitesmoke;
+    height: 20px;
+    background-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track:hover {
+    background-color: #0075ff;
+}

@@ -1,0 +1,16 @@
+.caratula {
+    grid-column: 1 / 3;
+    grid-row: 1 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+}
+
+.caratula img {
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.titlebar {
+    -webkit-app-region: drag;
+}
+
+
+button,
+input {
+    -webkit-app-region: no-drag;
+}
+
+body {
+    background-color: transparent;
+}
+
+.reproductor {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+main {
+    background-color: rgb(50, 50, 50);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 20px 30px;
+    border-radius: 30px;
+    border: 0.5px solid rgb(100, 100, 100);
+}
+
+.barra-cerrar {
+    display: flex;
+    background: transparent;
+    height: 50px;
+    position: relative;
+    justify-content: end;
+    align-items: center;
+}
+
+.container-button-main {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(50, 50, 50);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border: 0.5px solid rgb(100, 100, 100);
+    margin-top: 10px;
+}
+
+.minimizar,
+.cerrar {
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: rgb(100, 100, 100);
+}
+
+.red:hover {
+    color: rgb(255, 100, 100);
+}
+
+.yellow:hover {
+    color: rgb(255, 255, 255);
+}
+
+.minimizar:hover,
+.cerrar:hover {
+    cursor: pointer;
+}
+
+button {
+    background-color: rgb(50, 50, 50);
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
