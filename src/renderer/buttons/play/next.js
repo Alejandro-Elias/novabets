@@ -21,32 +21,23 @@ export const setRepeatCondition = (condition) => {
 
 export const nextTrack = () => {
   const next = () => {
-    console.log(repeatCondition);
-
-    const enPlay = !player.paused;
     const listaNueva = getStorage("listaNueva");
     if (listaNueva) {
       resetIndex();
-      setStorage("indexCurrent", 0)
+      setStorage("indexCurrent", 0);
       setStorage("listaNueva", false);
+      indiceActualizado = getStorage("indexCurrent");
       updateActiveTrack();
-      if (enPlay) {
-        indiceActualizado = getStorage("indexCurrent")
-        setTrack(player, playList, indiceActualizado)
-        ejecutarPlay()        
-      }
-      return;
     } else {
       if (repeatCondition === "repeat-one") {
       } else {
         nextIndex();
       }
 
-      indiceActualizado = getStorage("indexCurrent") || indexCurrent;
+      indiceActualizado = getStorage("indexCurrent") ?? indexCurrent;
 
       if (indiceActualizado >= playList.length) {
         if (repeatCondition === "repeat-normal") {
-          resetIndex();
           player.pause();
           playBtn.innerHTML = '<i class="fa-solid fa-circle-play play"></i>';
           setTimeout(() => {
@@ -62,14 +53,16 @@ export const nextTrack = () => {
     }
 
     indiceActualizado = getStorage("indexCurrent") || indexCurrent;
+    console.log({
+      index: indexCurrent,
+      indexActualizado: indiceActualizado,
+    });
 
     setTrack(player, playList, indiceActualizado);
     setTimeout(() => {
       progress.value = 0;
     }, 5);
-    if (enPlay) {
-      ejecutarPlay();
-    }
+    ejecutarPlay();
   };
 
   player.addEventListener("ended", () => {
@@ -84,6 +77,7 @@ export const nextTrack = () => {
 
   if ("mediaSession" in navigator) {
     navigator.mediaSession.setActionHandler("nexttrack", () => {
+      if (!playList || playList.length === 0) return;
       next();
     });
   }

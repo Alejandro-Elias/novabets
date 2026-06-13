@@ -1,30 +1,34 @@
-import { setStorage } from "../localStorage.js"
-import { loadList, playList } from "./buttons/play/loadList.js"
-import { getCurrent } from "./currentTrack.js"
-import { resetIndex, setindexCurrent } from "./indexCurrent.js"
-
+import { getStorage, setStorage } from "../localStorage.js";
+import { loadList} from "./buttons/play/loadList.js";
+import { getCurrent } from "./currentTrack.js";
+import { resetIndex, setindexCurrent } from "./indexCurrent.js";
 
 export const eliminarTrack = (id) => {
-    const trackActual = getCurrent()
+  const trackActual = getCurrent();
 
-    console.log(trackActual);
-    
-    
-    const listaNueva = playList.filter( item => {
-        return item.id != id
-    })    
+  const playList = getStorage('playList')
+  const playListSuffle = getStorage('playListSuffle')
 
-    const indiceActual = listaNueva.findIndex(archivo => archivo.id === trackActual.id)
+  const listaNueva = playList.filter((item) => {
+    return item.id != id;
+  });
 
-    console.log(indiceActual);
-    
+  const listaNuevaSuffle = playListSuffle.filter((item) => {
+    return item.id != id;
+  });
 
-    setindexCurrent(indiceActual)
+  const indiceActual = listaNueva.findIndex(
+    (archivo) => archivo.id === trackActual.id,
+  );
 
-    if (indiceActual === -1) {
-        resetIndex()        
-    }
+  setindexCurrent(indiceActual);
 
-    setStorage('playList', listaNueva)
-    loadList()
-}
+  if (indiceActual === -1) {
+    resetIndex();
+    setStorage("indexCurrent", 0);
+  }
+
+  setStorage("playList", listaNueva);
+  setStorage("playListSuffle", listaNuevaSuffle);
+  loadList();
+};

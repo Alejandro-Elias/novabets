@@ -5,20 +5,18 @@ import { indexCurrent, previousIndex } from "../../indexCurrent.js";
 import { updateActiveTrack } from "../../resaltarTrack.js";
 import { setTrack } from "../../setTrack.js";
 import { ejecutarPlay } from "../play.js";
+import { loadList, playList } from "./loadList.js";
 
 export const previousTrack = () => {
   const previous = () => {
-    const enPlay = !player.paused
-    const playList = getStorage("playList");
     if (indexCurrent > 0) {
+      loadList()
       previousIndex();
-      updateActiveTrack()
+      updateActiveTrack();
     }
 
     setTrack(player, playList, indexCurrent);
-    if (enPlay) {
-      ejecutarPlay();
-    }
+    ejecutarPlay();
   };
 
   previousBtn.addEventListener("click", () => {
