@@ -20,8 +20,6 @@ export const loadData = async () => {
   
   const dato = metadatos.find( dato => current.id === dato.id )
 
-  console.trace("getMetadata ejecutado");  
-
   setCurrent({ metadata: dato })
 
   mostrarMetadata(titleEl, artistEl, imgCover);

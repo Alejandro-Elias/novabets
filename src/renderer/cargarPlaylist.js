@@ -16,7 +16,6 @@ export const cargarPlaylist = (id) => {
   setStorage("playList", playlistACargar);
 
   suffle();
-  mostrarLista();
-  loadList();
   metadatos()
+  loadList();
 };
