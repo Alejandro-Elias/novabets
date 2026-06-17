@@ -4,6 +4,7 @@ import { suffle } from "../suffle.js";
 import { loadList } from "./buttons/play/loadList.js";
 import { setCurrent } from "./currentTrack.js";
 import { loadData } from "./getData.js";
+import { metadatos } from "./getMetadatos.js";
 import { resetIndex, indexCurrent } from "./indexCurrent.js";
 import { mostrarLista } from "./mostrarLista.js";
 import { updateActiveTrack } from "./resaltarTrack.js";
@@ -20,20 +21,19 @@ export const folder = () => {
 
     const playList = await window.electronAPI.devolverLista();
     if (playList.length > 0) {
-      removeItemStorage("playList")
+      removeItemStorage("playList");
 
-      let playListNormal = []
+      let playListNormal = [];
 
       playList.forEach((track, index) => {
         const song = {
           id: index,
-          track: track
-        }
-        playListNormal.push(song)        
+          track: track,
+        };
+        playListNormal.push(song);
       });
 
-
-      setStorage("playList", playListNormal)
+      setStorage("playList", playListNormal);
 
       mostrarLista();
 
@@ -42,13 +42,12 @@ export const folder = () => {
       const path = `${playListNormal[indexCurrent].track.carpeta}/${playListNormal[indexCurrent].track.archivo}`;
 
       setCurrent({ path: path });
-      loadData();
+      metadatos();
       setListaNueva(true);
-      setStorage("listaNueva", true)
+      setStorage("listaNueva", true);
       updateActiveTrack();
-      suffle()
+      suffle();
       loadList();
-      
     }
   });
 };

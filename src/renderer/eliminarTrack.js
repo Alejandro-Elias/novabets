@@ -1,13 +1,14 @@
 import { getStorage, setStorage } from "../localStorage.js";
-import { loadList} from "./buttons/play/loadList.js";
+import { loadList } from "./buttons/play/loadList.js";
 import { getCurrent } from "./currentTrack.js";
+import { metadatos } from "./getMetadatos.js";
 import { resetIndex, setindexCurrent } from "./indexCurrent.js";
 
 export const eliminarTrack = (id) => {
   const trackActual = getCurrent();
 
-  const playList = getStorage('playList')
-  const playListSuffle = getStorage('playListSuffle')
+  const playList = getStorage("playList");
+  const playListSuffle = getStorage("playListSuffle");
 
   const listaNueva = playList.filter((item) => {
     return item.id != id;
@@ -30,5 +31,6 @@ export const eliminarTrack = (id) => {
 
   setStorage("playList", listaNueva);
   setStorage("playListSuffle", listaNuevaSuffle);
-  loadList();
+  metadatos();
+  loadList()
 };

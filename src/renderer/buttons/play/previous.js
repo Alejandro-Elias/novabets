@@ -10,12 +10,13 @@ import { loadList, playList } from "./loadList.js";
 export const previousTrack = () => {
   const previous = () => {
     if (indexCurrent > 0) {
-      loadList()
+      loadList();
       previousIndex();
-      updateActiveTrack();setTimeout(() => {
-            progress.max = 100;
-            progress.value = 0;
-          }, 5);
+      updateActiveTrack();
+      setTimeout(() => {
+        progress.max = 100;
+        progress.value = 0;
+      }, 5);
     }
 
     setTrack(player, playList, indexCurrent);

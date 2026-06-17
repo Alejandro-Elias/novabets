@@ -15,6 +15,7 @@ import { loadList } from "./renderer/buttons/play/loadList.js";
 import { files } from "./renderer/files.js";
 import { guardarLista } from "./renderer/guardarPlaylist.js";
 import { SeleccionarLista } from "./renderer/selectPlaylist.js";
+import { metadatos } from "./renderer/getMetadatos.js";
   
   export const player = document.getElementById("player");
   export const playBtn = document.getElementById("playBtn");
@@ -63,3 +64,4 @@ import { SeleccionarLista } from "./renderer/selectPlaylist.js";
   loadList()
   guardarLista()
   SeleccionarLista()
+  metadatos()

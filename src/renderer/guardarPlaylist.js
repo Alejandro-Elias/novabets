@@ -10,11 +10,11 @@ export const guardarLista = () => {
     
     const guardarPlaylist = document.getElementById("guardarPlaylist");
 
-    const nombreLista = inputGuardar.value;
-
     const listaActual = playList;
 
     let listaAguardar = getStorage("playlists") || [];
+
+    const nombreLista = inputGuardar.value || `playList ${listaAguardar[listaAguardar.length - 1].id + 1}`;
 
     listaAguardar.push({
       id:

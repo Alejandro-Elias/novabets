@@ -1,13 +1,11 @@
 import { getCurrent } from "./currentTrack.js";
 
 export const tiempos = (player, progress, time) => {
+  let metadatos = getCurrent();
 
-let metadatos = getCurrent()
-
-let fullTime = metadatos.metadata.duration ;
+  let fullTime = metadatos.metadata.duration;
 
   player.addEventListener("timeupdate", () => {
-    
     const duration = player.duration;
 
     const currentTime = player.currentTime;
