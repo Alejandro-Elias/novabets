@@ -1,6 +1,6 @@
 {
   "name": "novabets",
-  "version": "1.1.4-beta",
+  "version": "1.2.0",
   "description": "",
   "main": "./src/main.js",
   "type": "commonjs",
@@ -24,12 +24,13 @@
     "music-metadata": "^11.12.3"
   },
   "build": {
-    "appId": "com.reproductor.novabets",
-    "productName": "novabets",
+    "appId": "io.github.alejandroelias.Novabets",
+    "productName": "Novabets",
     "linux": {
       "target": [
         "deb",
-        "AppImage"
+        "AppImage",
+        "flatpak"
       ],
       "icon": "build"
     }

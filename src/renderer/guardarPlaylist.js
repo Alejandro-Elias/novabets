@@ -6,15 +6,12 @@ export const guardarLista = () => {
   const inputGuardar = document.getElementById("inputGuardar");
   const listBtn = document.getElementById("listBtn");
   listBtn.addEventListener("click", () => {
-    console.log("click");
 
     const guardarPlaylist = document.getElementById("guardarPlaylist");
 
     const listaActual = playList;
 
     let listaAguardar = getStorage("playlists") || [];
-
-    console.trace("playlists")
 
     if (listaActual.length > 0) {
       const nombreLista =

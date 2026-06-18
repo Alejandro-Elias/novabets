@@ -53,12 +53,14 @@ export const mostrarLista = () => {
       listaReproduccion.classList.add("hidden");
       toggle = false;
     } else if (!toggle) {
+      if (playList.length <= 0) {
+        listaVacia.classList.remove("hidden");
+        listaVacia.classList.add("listaVacia");
+      }
       listaPlaylist.classList.add("hidden");
       guardarPlaylist.classList.add("hidden");
       line.classList.add("hidden");
       listaReproduccion.classList.remove("hidden");
-      listaVacia.classList.remove("hidden");
-      listaVacia.classList.add("listaVacia");
       toggle = true;
     }
   });

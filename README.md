@@ -4,7 +4,7 @@ Reproductor de música local para Linux desarrollado con Electron.
 
 ## Estado del proyecto
 
-**Versión actual:** 1.1.3-beta
+**Versión actual:** 1.2.0
 
 NovaBets es una aplicación funcional y apta para uso diario. Actualmente se encuentra en fase beta, por lo que pueden existir errores no detectados.
 
@@ -100,7 +100,7 @@ El proyecto fue creado como parte de mi proceso de aprendizaje en desarrollo web
 Clonar el repositorio:
 
 ```bash
-git clone https://github.com/Alejandro-Elias/novaBeat.git
+git clone https://github.com/Alejandro-Elias/novabets.git
 cd novabets
 ```
 
