@@ -44,8 +44,11 @@ import { metadatos } from "./renderer/getMetadatos.js";
   export const eliminar = document.getElementById("eliminar") 
   export const eliminarPlaylistBtn = document.getElementById("eliminarPlaylist") 
   export const guardarPlaylist = document.getElementById("guardarPlaylist") 
+  export const listaVacia = document.getElementById("listaVacia") 
 
   export const list = [];
+
+  localStorage.clear();
 
   mostrarLista();
   mostrarlistas()

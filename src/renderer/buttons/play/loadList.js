@@ -4,14 +4,14 @@ import { updateActiveTrack } from "../../resaltarTrack.js";
 
 const suffle = document.getElementById("suffle");
 
-export let playList = {};
-let playListNormal = {};
-let playListSuffle = {};
+export let playList = [];
+let playListNormal = [];
+let playListSuffle = [];
 let playListRandom = false
 
 export const loadList = () => {
-  playListNormal = getStorage("playList") || {}
-  playListSuffle = getStorage('playListSuffle') || {}
+  playListNormal = getStorage("playList") || []
+  playListSuffle = getStorage('playListSuffle') || []
   
 
   playListRandom ? playList = playListSuffle : playList = playListNormal;

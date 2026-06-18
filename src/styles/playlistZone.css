@@ -188,3 +188,23 @@ button i:active {
 .track:hover {
     background-color: #0075ff;
 }
+
+.listaVacia {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.listaVacia h2 {
+    font-size: 32px;
+    color: rgb(150, 150, 150);
+}
+
+.listaVacia p {
+    color: whitesmoke;
+    color: rgb(150, 150, 150);
+    font-weight: 800;
+}

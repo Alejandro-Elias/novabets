@@ -17,6 +17,9 @@ export const loadData = async () => {
   const current = getCurrent()
 
   const metadatos = getList()
+
+  if (metadatos) {
+    
   
   const dato = metadatos.find( dato => current.id === dato.id )
 
@@ -25,6 +28,7 @@ export const loadData = async () => {
   mostrarMetadata(titleEl, artistEl, imgCover);
 
   tiempos(player, progress, time);
+  }
 
   return;
 };

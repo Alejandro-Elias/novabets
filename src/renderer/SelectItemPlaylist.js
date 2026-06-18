@@ -1,6 +1,7 @@
 import { listaReproduccion } from "../renderer.js";
 import { playSelectItem } from "./buttons/play.js";
 import { eliminarTrack } from "./eliminarTrack.js";
+import { loadData } from "./getData.js";
 import { setindexCurrent } from "./indexCurrent.js";
 
 export const selectPLayList = () => {
@@ -15,11 +16,15 @@ export const selectPLayList = () => {
 
     if (action === "seleccionar") {
       setindexCurrent(index);
-
+      setTimeout(() => {
+            progress.max = 100;
+            progress.value = 0;
+          }, 5);
       playSelectItem();
     }
     if (action === 'eliminar') {
       eliminarTrack(id)      
     }
+    loadData()
   });
 };

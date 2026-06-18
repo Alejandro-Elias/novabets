@@ -2,8 +2,8 @@ let current = {
   id: 0,
   path: null,
   metadata: {
-    title: "",
-    artist: "",
+    title: "NovaBets",
+    artist: "Music Player",
     duration: "00:00",
     cover: ""
   },

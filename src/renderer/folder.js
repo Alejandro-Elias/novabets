@@ -38,6 +38,7 @@ export const folder = () => {
       mostrarLista();
 
       resetIndex();
+      setStorage('indexCurrent', 0)
 
       const path = `${playListNormal[indexCurrent].track.carpeta}/${playListNormal[indexCurrent].track.archivo}`;
 

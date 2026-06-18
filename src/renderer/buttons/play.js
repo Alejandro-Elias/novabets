@@ -1,6 +1,6 @@
-import { getStorage } from "../../localStorage.js";
+import { getStorage, setStorage } from "../../localStorage.js";
 import { playBtn, player } from "../../renderer.js";
-import { listaNueva } from "../folder.js";
+import { listaNueva, setListaNueva } from "../folder.js";
 import { loadData } from "../getData.js";
 import { indexCurrent } from "../indexCurrent.js";
 import { updateActiveTrack } from "../resaltarTrack.js";
@@ -12,10 +12,12 @@ export const ejecutarPlay = async () => {
   const listaNueva = getStorage("listaNueva")
   
   if (listaNueva) {
-    loadList();
+    loadList(); 
+    setStorage('listaNueva', false)
   }
 
-  if (!playList || playList.length === 0) {
+
+  if (!playList || playList.length <= 0) {
     alert("debe seleccionar una carpeta primero");
     return;
   }
