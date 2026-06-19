@@ -1,4 +1,4 @@
-import { getStorage } from "../localStorage.js";
+import { getStorage } from "../modules/localStorage.js";
 import { playList } from "./buttons/play/loadList.js";
 import { setList } from "./listMetadatos.js";
 

@@ -1,4 +1,4 @@
-import { getStorage } from "../../../localStorage.js";
+import { getStorage } from "../../../modules/localStorage.js";
 import { mostrarLista } from "../../mostrarLista.js";
 import { updateActiveTrack } from "../../resaltarTrack.js";
 
@@ -7,33 +7,31 @@ const suffle = document.getElementById("suffle");
 export let playList = [];
 let playListNormal = [];
 let playListSuffle = [];
-let playListRandom = false
+let playListRandom = false;
 
 export const loadList = () => {
+  playListNormal = getStorage("playList") || [];
+  playListSuffle = getStorage("playListSuffle") || [];
 
-  playListNormal = getStorage("playList") || []
-  playListSuffle = getStorage('playListSuffle') || []
-  
+  playListRandom ? (playList = playListSuffle) : (playList = playListNormal);
 
-  playListRandom ? playList = playListSuffle : playList = playListNormal;
-
-  mostrarLista()
+  mostrarLista();
 };
 
-suffle.addEventListener('click', () => {
-  if (suffle.classList[2] === 'suffleNoActive') {
-    suffle.classList.remove('suffleNoActive') 
-    suffle.classList.add('suffleActive')
-    playList = playListSuffle 
-    playListRandom = true
-    mostrarLista()
-    updateActiveTrack()
+suffle.addEventListener("click", () => {
+  if (suffle.classList[2] === "suffleNoActive") {
+    suffle.classList.remove("suffleNoActive");
+    suffle.classList.add("suffleActive");
+    playList = playListSuffle;
+    playListRandom = true;
+    mostrarLista();
+    updateActiveTrack();
   } else {
-    suffle.classList.remove('suffleActive') 
-    suffle.classList.add('suffleNoActive')
-    playList = playListNormal 
-    playListRandom = false
-    mostrarLista()
-    updateActiveTrack()
-    }
-})
+    suffle.classList.remove("suffleActive");
+    suffle.classList.add("suffleNoActive");
+    playList = playListNormal;
+    playListRandom = false;
+    mostrarLista();
+    updateActiveTrack();
+  }
+});

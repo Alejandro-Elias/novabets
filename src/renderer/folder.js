@@ -1,6 +1,6 @@
-import { removeItemStorage, setStorage } from "../localStorage.js";
-import { selectFolder } from "../renderer.js";
-import { suffle } from "../suffle.js";
+import { removeItemStorage, setStorage } from "../modules/localStorage.js";
+import { selectFolder } from "../modules/renderer.js";
+import { suffle } from "../modules/suffle.js";
 import { loadList } from "./buttons/play/loadList.js";
 import { setCurrent } from "./currentTrack.js";
 import { loadData } from "./getData.js";
@@ -38,7 +38,7 @@ export const folder = () => {
       mostrarLista();
 
       resetIndex();
-      setStorage('indexCurrent', 0)
+      setStorage("indexCurrent", 0);
 
       const path = `${playListNormal[indexCurrent].track.carpeta}/${playListNormal[indexCurrent].track.archivo}`;
 

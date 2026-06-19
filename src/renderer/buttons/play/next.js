@@ -1,5 +1,10 @@
-import { getStorage, setStorage } from "../../../localStorage.js";
-import { player, playBtn, progress, nextBtn } from "../../../renderer.js";
+import { getStorage, setStorage } from "../../../modules/localStorage.js";
+import {
+  player,
+  playBtn,
+  progress,
+  nextBtn,
+} from "../../../modules/renderer.js";
 import {
   indexCurrent,
   nextIndex,

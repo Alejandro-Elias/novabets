@@ -1,5 +1,5 @@
-import { getStorage, setStorage } from "../localStorage.js";
-import { suffle } from "../suffle.js";
+import { getStorage, setStorage } from "../modules/localStorage.js";
+import { suffle } from "../modules/suffle.js";
 import { loadList } from "./buttons/play/loadList.js";
 import { metadatos } from "./getMetadatos.js";
 import { mostrarLista } from "./mostrarLista.js";
@@ -16,6 +16,6 @@ export const cargarPlaylist = (id) => {
   setStorage("playList", playlistACargar);
 
   suffle();
-  metadatos()
+  metadatos();
   loadList();
 };

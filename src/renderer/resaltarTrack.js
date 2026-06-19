@@ -1,4 +1,4 @@
-import { getStorage } from "../localStorage.js";
+import { getStorage } from "../modules/localStorage.js";
 import { getCurrent } from "./currentTrack.js";
 
 export const updateActiveTrack = () => {

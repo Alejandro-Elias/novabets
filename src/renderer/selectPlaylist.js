@@ -1,12 +1,14 @@
-import { guardarPlaylist, line, listaPlaylist, listaReproduccion } from "../renderer.js";
-import { suffle } from "../suffle.js";
+import {
+  guardarPlaylist,
+  line,
+  listaPlaylist,
+  listaReproduccion,
+} from "../modules/renderer.js";
 import { cargarPlaylist } from "./cargarPlaylist.js";
 import { eliminarPlaylist } from "./eliminarPlaylist.js";
-import { eliminarTrack } from "./eliminarTrack.js";
-import { setindexCurrent } from "./indexCurrent.js";
 import { mostrarLista, mostrarlistas } from "./mostrarLista.js";
 
-export const SeleccionarLista = () => {
+export const seleccionarLista = () => {
   listaPlaylist.addEventListener("click", (e) => {
     const button = e.target.closest("button");
 

@@ -1,4 +1,3 @@
-import { getStorage } from "../localStorage.js";
 import {
   artistEl,
   imgCover,
@@ -6,7 +5,7 @@ import {
   progress,
   time,
   titleEl,
-} from "../renderer.js";
+} from "../modules/renderer.js";
 import { getCurrent, setCurrent } from "./currentTrack.js";
 import { getList, setList } from "./listMetadatos.js";
 import { mostrarMetadata } from "./mostrarDatos.js";

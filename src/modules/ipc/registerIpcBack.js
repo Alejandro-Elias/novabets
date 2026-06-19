@@ -6,15 +6,14 @@ const os = require("os");
 
 function registerIpc() {
   ipcMain.handle("get-metadata", async (_, songPath) => {
-
     if (!songPath) {
-  return {
-    title: "",
-    artist: "",
-    duration: "00:00",
-    cover: "./image/novaPortada.png"
-  };
-}
+      return {
+        title: "",
+        artist: "",
+        duration: "00:00",
+        cover: "./assets/images/novaPortada.png",
+      };
+    }
 
     const metadata = await mm.parseFile(songPath);
 
@@ -34,14 +33,15 @@ function registerIpc() {
 
     const minutos = Math.floor(segundos / 60);
     const restoSegundos = Math.floor(segundos % 60);
-    
 
     return {
-      title: metadata.common.title || '',
-      artist: metadata.common.artist || '',
-      duration: `${minutos.toString().padStart(2, "0")}:${restoSegundos.toString().padStart(2, "0")}` || '00.00,',
+      title: metadata.common.title || "",
+      artist: metadata.common.artist || "",
+      duration:
+        `${minutos.toString().padStart(2, "0")}:${restoSegundos.toString().padStart(2, "0")}` ||
+        "00.00,",
       durationMs: metadata.format.duration,
-      cover: cover ,
+      cover: cover,
     };
   });
 }

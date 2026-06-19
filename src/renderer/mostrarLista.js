@@ -1,13 +1,12 @@
-import { getStorage } from "../localStorage.js";
+import { getStorage } from "../modules/localStorage.js";
 import {
   guardarPlaylist,
   isListBtn,
   listaPlaylist,
   listaReproduccion,
   listaVacia,
-} from "../renderer.js";
+} from "../modules/renderer.js";
 import { playList } from "./buttons/play/loadList.js";
-import { guardarLista } from "./guardarPlaylist.js";
 
 export const mostrarlistas = () => {
   listaPlaylist.innerHTML = "";

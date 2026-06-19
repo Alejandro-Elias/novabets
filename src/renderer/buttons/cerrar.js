@@ -1,10 +1,10 @@
-import { cerrar, player } from "../../renderer.js";
+import { cerrar, player } from "../../modules/renderer.js";
 import { resetIndex } from "../indexCurrent.js";
 
 export const cerrarBtn = () => {
   cerrar.addEventListener("click", () => {
-    player.pause()
-    resetIndex()
+    player.pause();
+    resetIndex();
     window.electronAPI.closeApp();
   });
 };

@@ -1,5 +1,5 @@
-import { getStorage, setStorage } from "../localStorage.js";
-import { player, volumen, volumenText } from "../renderer.js";
+import { getStorage, setStorage } from "../modules/localStorage.js";
+import { player, volumen, volumenText } from "../modules/renderer.js";
 
 export const cambiarVolumen = () => {
   volumen.addEventListener("input", () => {

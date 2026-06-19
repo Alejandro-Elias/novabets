@@ -1,5 +1,5 @@
-import { getStorage, setStorage } from "../../localStorage.js";
-import { playBtn, player } from "../../renderer.js";
+import { getStorage, setStorage } from "../../modules/localStorage.js";
+import { playBtn, player } from "../../modules/renderer.js";
 import { listaNueva, setListaNueva } from "../folder.js";
 import { loadData } from "../getData.js";
 import { indexCurrent } from "../indexCurrent.js";

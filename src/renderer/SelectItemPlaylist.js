@@ -1,4 +1,4 @@
-import { listaReproduccion, progress } from "../renderer.js";
+import { listaReproduccion, progress } from "../modules/renderer.js";
 import { playSelectItem } from "./buttons/play.js";
 import { eliminarTrack } from "./eliminarTrack.js";
 import { setindexCurrent } from "./indexCurrent.js";

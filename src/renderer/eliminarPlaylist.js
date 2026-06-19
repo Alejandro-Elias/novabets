@@ -1,13 +1,12 @@
-import { getStorage, setStorage } from "../localStorage.js"
-import { mostrarlistas } from "./mostrarLista.js"
-
+import { getStorage, setStorage } from "../modules/localStorage.js";
+import { mostrarlistas } from "./mostrarLista.js";
 
 export const eliminarPlaylist = (id) => {
-    let listasGuardadas = getStorage('playlists')
+  let listasGuardadas = getStorage("playlists");
 
-    const nuevasListas = listasGuardadas.filter(lista => lista.id != id )
+  const nuevasListas = listasGuardadas.filter((lista) => lista.id != id);
 
-    setStorage('playlists', nuevasListas)
+  setStorage("playlists", nuevasListas);
 
-    mostrarlistas()
-}
+  mostrarlistas();
+};

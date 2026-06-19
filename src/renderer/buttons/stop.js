@@ -1,4 +1,4 @@
-import { player, progress, stopBtn } from "../../renderer.js";
+import { player, progress, stopBtn } from "../../modules/renderer.js";
 import { indexCurrent, resetIndex } from "../indexCurrent.js";
 import { updateActiveTrack } from "../resaltarTrack.js";
 import { setTrack } from "../setTrack.js";
@@ -10,7 +10,7 @@ export const stop = () => {
     resetIndex();
     localStorage.setItem("indexCurrent", 0);
     setTrack(player, playList, 0);
-    updateActiveTrack()
+    updateActiveTrack();
     playBtn.innerHTML = '<i class="fa-solid fa-circle-play play"></i>';
     setTimeout(() => {
       progress.max = 100;

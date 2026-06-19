@@ -1,5 +1,5 @@
-import { getStorage } from "../../../localStorage.js";
-import { player, previousBtn, progress } from "../../../renderer.js";
+import { getStorage } from "../../../modules/localStorage.js";
+import { player, previousBtn, progress } from "../../../modules/renderer.js";
 import { setCurrent } from "../../currentTrack.js";
 import { indexCurrent, previousIndex } from "../../indexCurrent.js";
 import { updateActiveTrack } from "../../resaltarTrack.js";

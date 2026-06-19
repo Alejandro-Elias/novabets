@@ -1,4 +1,4 @@
-import { repeatBtn, repeatText } from "../renderer.js";
+import { repeatBtn, repeatText } from "../modules/renderer.js";
 import { setRepeatCondition } from "./buttons/play/next.js";
 
 let verificador = 0;
@@ -6,22 +6,19 @@ let verificador = 0;
 export const repeat = () => {
   repeatBtn.addEventListener("click", () => {
     if (verificador === 0) {
-        repeatText.innerHTML = 'ONE'
-        repeatBtn.classList.add('repeatActive')
-        verificador++
-        setRepeatCondition('repeat-one')        
-        
+      repeatText.innerHTML = "ONE";
+      repeatBtn.classList.add("repeatActive");
+      verificador++;
+      setRepeatCondition("repeat-one");
     } else if (verificador === 1) {
-        repeatText.innerHTML = 'ALL'
-        verificador++
-        setRepeatCondition('repeat-all')       
-
+      repeatText.innerHTML = "ALL";
+      verificador++;
+      setRepeatCondition("repeat-all");
     } else if (verificador === 2) {
-        repeatText.innerHTML = ''
-        repeatBtn.classList.remove('repeatActive')
-        verificador = 0
-        setRepeatCondition('repeat-normal')       
-        
+      repeatText.innerHTML = "";
+      repeatBtn.classList.remove("repeatActive");
+      verificador = 0;
+      setRepeatCondition("repeat-normal");
     }
   });
 };

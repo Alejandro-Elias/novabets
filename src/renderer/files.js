@@ -1,6 +1,6 @@
-import { getStorage, setStorage } from "../localStorage.js";
-import { selectFiles } from "../renderer.js";
-import { suffle } from "../suffle.js";
+import { getStorage, setStorage } from "../modules/localStorage.js";
+import { selectFiles } from "../modules/renderer.js";
+import { suffle } from "../modules/suffle.js";
 import { loadList } from "./buttons/play/loadList.js";
 import { loadData } from "./getData.js";
 import { metadatos } from "./getMetadatos.js";

@@ -137,13 +137,62 @@ dist/
 ```text
 src/
 ├── main.js
+├── index.html
 ├── renderer/
+│   ├── buttons/
+│   │   ├── play.js
+│   │   ├── cerrar.js
+│   │   ├── minimizar.js
+│   │   ├── stop.js
+│   │   └── play/
+│   │       ├── loadList.js
+│   │       ├── next.js
+│   │       └── previous.js
+│   ├── cargarPlaylist.js
+│   ├── currentTrack.js
+│   ├── eliminarPlaylist.js
+│   ├── eliminarTrack.js
+│   ├── files.js
+│   ├── folder.js
+│   ├── getData.js
+│   ├── getMetadatos.js
+│   ├── guardarPlaylist.js
+│   ├── indexCurrent.js
+│   ├── listMetadatos.js
+│   ├── mostrarDatos.js
+│   ├── mostrarLista.js
+│   ├── repeat.js
+│   ├── resaltarTrack.js
+│   ├── SelectItemPlaylist.js
+│   ├── selectPlaylist.js
+│   ├── setTrack.js
+│   ├── tiempos.js
+│   └── volumen.js
 ├── modules/
+│   ├── localStorage.js
+│   ├── preload.js
+│   ├── renderer.js
+│   ├── suffle.js
+│   └── ipc/
+│       ├── createWindow.js
+│       ├── registerIpc.js
+│       ├── registerIpcBack.js
+│       ├── seleccionarArchivo.js
+│       └── seleccionarCarpeta.js
 ├── css/
+│   ├── controls.css
+│   ├── cover.css
+│   ├── data.css
+│   ├── playlistZone.css
+│   └── style.css
 └── assets/
+    ├── fontAwesome/
+    │   └── webfonts/
+    │       └── all.min.css
+    └── images/
 ```
 
-> La estructura puede variar a medida que evoluciona el proyecto.
+> La estructura está organizada para mantener una separación clara entre componentes renderer, módulos reutilizables, estilos y activos.
 
 ---
 

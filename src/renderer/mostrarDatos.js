@@ -1,4 +1,4 @@
-import { artistEl, imgCover, titleEl } from "../renderer.js";
+import { artistEl, imgCover, titleEl  } from "../modules/renderer.js";
 import { getCurrent } from "./currentTrack.js";
 
 let urlImagenActual = null;
@@ -22,7 +22,7 @@ export const mostrarMetadata = () => {
 
       imgCover.src = urlImagenActual;
     } else {
-      imgCover.src = "./image/novaPortada.png";
+      imgCover.src = "./assets/images/novaPortada.png";
     }
 
     if ("mediaSession" in navigator) {
