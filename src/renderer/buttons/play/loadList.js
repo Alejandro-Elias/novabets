@@ -19,7 +19,7 @@ export const loadList = () => {
 };
 
 suffle.addEventListener("click", () => {
-  if (suffle.classList[2] === "suffleNoActive") {
+  if (suffle.classList[3] === "suffleNoActive") {
     suffle.classList.remove("suffleNoActive");
     suffle.classList.add("suffleActive");
     playList = playListSuffle;
