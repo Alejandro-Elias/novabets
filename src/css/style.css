@@ -14,8 +14,19 @@ input {
     -webkit-app-region: no-drag;
 }
 
+html,
+body {
+    overflow: hidden;
+}
+
 body {
     background-color: transparent;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.animate__animated.animate__zoomIn {
+    --animate-duration: 0.3s;
 }
 
 .reproductor {
@@ -99,7 +110,7 @@ body.compact .reproductor {
     height: 60px;
 }
 
-body.compact main {    
+body.compact main {
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: 1fr;
     width: 1240px;

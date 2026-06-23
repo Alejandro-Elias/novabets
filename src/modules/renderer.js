@@ -1,3 +1,7 @@
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.style.opacity = 1;
+});
+
 import { cerrarBtn } from "../renderer/buttons/cerrar.js";
 import { minimizarBtn } from "../renderer/buttons/minimizar.js";
 import { play } from "../renderer/buttons/play.js";
@@ -25,6 +29,8 @@ export const titleEl = document.getElementById("title");
 export const artistEl = document.getElementById("artist");
 export const titleElDuplicado = document.getElementById("titleDuplicado");
 export const artistElDuplicado = document.getElementById("artistDuplicado");
+export const titleElTriplicado = document.getElementById("titleTriplicado");
+export const artistElTriplicado = document.getElementById("artistTriplicado");
 export const volumen = document.getElementById("volumen-control");
 export const time = document.getElementById("tiempo-progreso");
 export const minimizar = document.getElementById("minimizar");
@@ -48,9 +54,11 @@ export const eliminarPlaylistBtn = document.getElementById("eliminarPlaylist");
 export const guardarPlaylist = document.getElementById("guardarPlaylist");
 export const listaVacia = document.getElementById("listaVacia");
 export const compactBtn = document.getElementById("compactBtn");
+export const novaBody = document.getElementById("novaBody");
 
 export const list = [];
 
+compactMode()
 mostrarLista();
 mostrarlistas();
 mostrarMetadata();
@@ -69,4 +77,3 @@ loadList();
 guardarLista();
 seleccionarLista();
 metadatos();
-compactMode()

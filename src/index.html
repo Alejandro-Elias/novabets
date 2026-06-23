@@ -10,23 +10,24 @@
     <link rel="stylesheet" href="./css/playlistZone.css">
     <link rel="stylesheet" href="./css/controls.css">
     <link rel="stylesheet" href="./assets/fontAwesome/webfonts/all.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="icon" href="../build/icon.png">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' blob:; script-src 'self';" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' blob:; script-src 'self'; style-src 'self' 'unsafe-inline'" />
     <meta http-equiv="X-Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' blob:; script-src 'self';" />
+        content="default-src 'self'; img-src 'self' blob:; script-src 'self'; style-src 'self' 'unsafe-inline'" />
     <title>NovaBeats</title>
 </head>
 
-<body class="" >
+<body id="novaBody" class="animate__zoomIn">
     <div class="barra-cerrar">
         <div class="container-button-main">
-            <button id="compactBtn" class="minimizar">Ꚛ</button>
+            <button id="compactBtn" class="minimizar yellow"><i class="fa-solid fa-angle-up"></i></button>
         </div>
         <div class="container-button-main ">
-            <button id="minimizar" class="minimizar yellow">-</button>
+            <button id="minimizar" class="minimizar yellow"><i class="fa-solid fa-window-minimize"></i></button>
         </div>
         <div class="container-button-main ">
-            <button id="cerrar" class="cerrar red">x</button>
+            <button id="cerrar" class="cerrar red"><i class="fa-solid fa-xmark"></i></button>
         </div>
     </div>
     <div class="reproductor">
@@ -37,11 +38,16 @@
                         <h1 class="title textos" id="title"></h1>
                         <p class="separacion textos"> / </p>
                         <p class="artist textos" id="artist"></p>
-                        <span class="espacio" ></span>
+                        <span class="espacio"></span>
                         <h1 class="title textos duplicado" id="titleDuplicado"></h1>
                         <p class="separacion textos duplicado"> / </p>
                         <p class="artist textos duplicado" id="artistDuplicado"></p>
-                        <span class="espacio" ></span>
+                        <span class="espacio"></span>
+                        <span class="espacio"></span>
+                        <h1 class="title textos duplicado" id="titleTriplicado"></h1>
+                        <p class="separacion textos duplicado"> / </p>
+                        <p class="artist textos duplicado" id="artistTriplicado"></p>
+                        <span class="espacio"></span>
                     </div>
                 </div>
                 <div class="progreso">
