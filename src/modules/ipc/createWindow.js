@@ -5,7 +5,7 @@ let win = null;
 
 const createWindow = () => {
   win = new BrowserWindow({
-    width: 1262,
+    width: 1300,
     height: 292,
     resizable: true,
     autoHideMenuBar: false,
@@ -32,9 +32,9 @@ const createWindow = () => {
       win.setResizable(true)
       
     if (isCompact) {
-      win.setSize(1262, 100)      
+      win.setSize(1300, 100)      
     } else {      
-      win.setSize(1262, 392)
+      win.setSize(1300, 392)
     }
 
       win.setResizable(false)

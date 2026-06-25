@@ -12,6 +12,6 @@ export const setTrack = async (player, playList, indexCurrrent) => {
     id: playList[indexCurrrent].id,
   });
 
-  player.src = playList.length > 0 ? path : "";
+  player.src = playList.length > 0 ? path : ""; 
 };
 

@@ -15,6 +15,23 @@
     text-align: center;
     justify-content: space-around;
     height: 100%;
+    position: relative;
+}
+
+.textos-titulos {
+    position: absolute;
+    top: 0;
+    left: -250px;
+    color: white;
+    z-index: 1;
+}
+
+.visualizer {
+    position: absolute;
+    top: 0;
+    margin-top: -0px;
+    left: -248px;
+    width: 500px;
 }
 
 .title {
@@ -56,7 +73,8 @@
     appearance: none;
     overflow: hidden;
     height: 18px;
-    background: rgb(80, 80, 80);
+    background: rgba(80, 80, 80, 0.1);
+    border: 1px solid rgb(80, 80, 80);
     border-radius: 9px;
 }
 
@@ -105,7 +123,7 @@ body.compact .titulos {
 body.compact .textos-titulos {
     display: inline-flex;
     flex-shrink: 0;
-    animation: mover 7s linear infinite;
+    animation: mover 9s linear infinite;
     white-space: nowrap;
 }
 
@@ -120,7 +138,7 @@ body.compact .separacion, body.compact .duplicado {
 
 @keyframes mover {
     from {
-        transform: translateX(0px);
+        transform: translateX(5px);
     }
 
     to {
@@ -130,7 +148,7 @@ body.compact .separacion, body.compact .duplicado {
 
 body.compact .textos{
     font-size: 16px;
-    margin: 0 0 0 3px;
+    margin: 3px 0 0 3px;
     padding: 0;
     text-align: right;
     width: max-content;
@@ -156,4 +174,9 @@ body.compact .barra-progreso {
 
 body.conpact .tiempo-progreso {
     font-size: 16px;
+}
+
+body.compact .visualizer {
+    display: none;
+    height: 0;
 }

@@ -1,5 +1,5 @@
-window.addEventListener('DOMContentLoaded', () => {
-    document.body.style.opacity = 1;
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.style.opacity = 1;
 });
 
 import { cerrarBtn } from "../renderer/buttons/cerrar.js";
@@ -19,6 +19,7 @@ import { mostrarLista, mostrarlistas } from "../renderer/mostrarLista.js";
 import { repeat } from "../renderer/repeat.js";
 import { selectPLayList } from "../renderer/SelectItemPlaylist.js";
 import { seleccionarLista } from "../renderer/selectPlaylist.js";
+import { initVisualizer } from "../renderer/vizualizer.js";
 import { cambiarVolumen } from "../renderer/volumen.js";
 
 export const player = document.getElementById("player");
@@ -58,7 +59,7 @@ export const novaBody = document.getElementById("novaBody");
 
 export const list = [];
 
-compactMode()
+compactMode();
 mostrarLista();
 mostrarlistas();
 mostrarMetadata();
@@ -77,3 +78,4 @@ loadList();
 guardarLista();
 seleccionarLista();
 metadatos();
+player.addEventListener("play", initVisualizer);

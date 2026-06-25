@@ -6,6 +6,15 @@ let urlImagenActual = null;
 export const mostrarMetadata = () => {
   const metadatos = getCurrent();
 
+  requestAnimationFrame(() => {
+    const ancho = document.querySelector('.textos-titulos').scrollWidth;
+
+    const duracion = Math.max(15, ancho / 50);
+
+    document.querySelector('.textos-titulos')
+        .style.animationDuration = `${duracion}s`;
+});
+
   if (metadatos || metadatos.length > 0) {
     document.title = `${metadatos.metadata.artist} - ${metadatos.metadata.title}`;
 

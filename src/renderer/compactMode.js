@@ -6,7 +6,7 @@ let isCompact = false;
 function animate(el, animation) {
   el.classList.remove("animate__animated", animation);
 
-  void el.offsetWidth; // fuerza reflow
+  void el.offsetWidth; 
 
   el.classList.add("animate__animated", animation);
 }
