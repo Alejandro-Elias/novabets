@@ -1,3 +1,9 @@
+:root {
+    --color-primario: rgb(230, 230, 255) ;
+    --color-secundario: rgb(0, 117, 255) ;
+    --color-resaltado: rgba(0, 117, 255, 0.5);
+}
+
 .playlistZone {
     -webkit-app-region: no-drag;
     grid-column: 9 / 13;
@@ -5,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: safe center;
-    color: whitesmoke;
+    color: var(--color-primario);
     height: 200px;
     justify-content: space-between;
 }
@@ -19,7 +25,7 @@
 }
 
 .playListContent p {
-    color: white;
+    color: var(--color-primario);
 }
 
 .guardarPlaylist {
@@ -31,7 +37,7 @@
 
 .guardarPlaylist p,
 .guardarPlaylist button {
-    color: whitesmoke;
+    color: var(--color-primario);
 }
 
 .guardarPlaylist p,
@@ -44,8 +50,8 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: rgb(50, 50, 50);
-    color: whitesmoke;
+    background: var(--color-resaltado);
+    color: var(--color-primario);
     outline: none;
     border: none;
     padding: 0 3px;
@@ -56,7 +62,7 @@
 }
 
 .line {
-    color: whitesmoke;
+    color: var(--color-primario);
 }
 
 .playList {
@@ -75,7 +81,7 @@
 }
 
 .playList::-webkit-scrollbar-thumb {
-    background-color: #0075ff;
+    background-color: var(--color-secundario);
 }
 
 .track {
@@ -88,13 +94,13 @@
 }
 
 .eliminarBtn {
-    color: whitesmoke;
+    color: var(--color-primario);
     background: transparent;
-    color: rgb(80, 80, 80);
+    color: var(--color-secundario)  ;
 }
 
 .eliminarBtn:hover {
-    color: whitesmoke;
+    color: var(--color-primario);
 }
 
 .hidden {
@@ -104,14 +110,14 @@
 .isFolderBtn {
     width: 25%;
     background: transparent;
-    color: whitesmoke;
+    color: var(--color-primario);
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
 .isFolderBtn:hover {
-    color: #0075ff;
+    color: var(--color-secundario);
 }
 
 .folder {
@@ -132,15 +138,15 @@ ul {
 }
 
 .active {
-    background-color: #0075ff50;
+    background-color: var(--color-resaltado);
 }
 
 .i-color {
-    color: rgba(0, 117, 255, 0.5);
+    color: var(--color-resaltado);
 }
 
 button i:active {
-    color: rgba(0, 117, 255, 0.5);
+    color: var(--color-resaltado);
 }
 
 .division {
@@ -150,7 +156,7 @@ button i:active {
 .item-playlist {
     width: 100%;
     text-align: start;
-    color: whitesmoke;
+    color: var(--color-primario);
     height: 20px;
     background-color: transparent;
     white-space: nowrap;
@@ -159,7 +165,7 @@ button i:active {
 }
 
 .track:hover {
-    background-color: #0075ff;
+    background-color: var(--color-resaltado);
 }
 
 .listaVacia {
@@ -173,12 +179,12 @@ button i:active {
 
 .listaVacia h2 {
     font-size: 32px;
-    color: rgb(150, 150, 150);
+    color: var(--color-resaltado);
 }
 
 .listaVacia p {
-    color: whitesmoke;
-    color: rgb(150, 150, 150);
+    color: var(--color-primario);
+    color: var(--color-resaltado);
     font-weight: 800;
 }
 

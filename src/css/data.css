@@ -1,3 +1,9 @@
+:root {
+    --color-primario: rgb(230, 230, 255) ;
+    --color-secundario: rgb(0, 117, 255) ;
+    --color-resaltado: rgba(0, 117, 255, 0.5);
+}
+
 .datos {
     grid-column: 3 / 9;
     grid-row: 2 / 4;
@@ -7,7 +13,6 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: whitesmoke;
     -webkit-app-region: drag;
 }
 
@@ -22,7 +27,6 @@
     position: absolute;
     top: 0;
     left: -250px;
-    color: white;
     z-index: 999;
     -webkit-app-region: drag;
 }

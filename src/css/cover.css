@@ -9,6 +9,7 @@
     height: 200px;
     border-radius: 25px;
     border: 2px solid rgb(80, 80, 80);
+    -webkit-app-region: drag;
 }
 
 body.compact .caratula {

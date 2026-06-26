@@ -1,4 +1,9 @@
-
+:root {
+    --color-primario: rgb(230, 230, 255) ;
+    --color-secundario: rgb(0, 117, 255) ;
+    --color-resaltado: rgba(0, 117, 255, 0.5);
+    --color-hover: rgba(0, 117, 255, 0.8);
+}
 
 .navegador {
     grid-column: 3 / 9;
@@ -7,7 +12,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    color: white;
+    color: var(--color-primario);
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -24,7 +29,7 @@
 
 .tiempo-progreso {
     position: absolute;
-    right: 60px;
+    right: 30px;
 }
 
 .barra-progreso {
@@ -35,7 +40,7 @@
     appearance: none;
     overflow: hidden;
     height: 18px;
-    background: rgba(80, 80, 80, 0.1);
+    background: var(--color-resaltado);
     border: 1px solid rgb(80, 80, 80);
     border-radius: 9px;
 }
@@ -45,7 +50,7 @@
     appearance: none;
     height: 0;
     width: 0;
-    box-shadow: -300px 0 0 300px #0075ff;
+    box-shadow: -300px 0 0 300px var(--color-secundario);
 }
 
 .volumen {
@@ -56,7 +61,7 @@
     justify-content: start;
     flex-direction: column;
     align-items: center;
-    color: whitesmoke;
+    color: var(--color-primario);
     width: 120px;
     height: 32px;
     margin-left: 25px;
@@ -67,7 +72,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 15%;
+    align-items: center;
+    gap: 20%;
 }
 
 .vol-text p:first-child {
@@ -87,7 +93,7 @@
 }
 
 .volumen-cantidad {
-    color: #0075ff;
+    color: var(--color-secundario);
 }
 
 .control-principal {
@@ -107,8 +113,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    color: white;
+    color: var(--color-primario);
     width: 120px;
+    -webkit-app-region: no-drag;
 }
 
 .suffleNoActive,
@@ -122,53 +129,53 @@
     align-items: center;
     width: 60px;
     height: 24px;
-    color: white;
+    color: var(--color-resaltado);
 }
 
 .suffle {
     width: 60px;
-    color: white;
+    color: var(--color-resaltado);
 }
 
 .suffleActive {
-    color: #0075ff;
+    color: var(--color-secundario);
     font-size: 24px;
 }
 
 .repeatActive {
-    color: #0075ff;
+    color: var(--color-secundario);
     font-size: 24px;
 }
 
 .one-all {
     font-size: 24px;
-    color: #0075ff;
+    color: var(--color-secundario);
     width: 60px;
     padding-right: 20px;
 }
 
 .buttons {
     font-size: 24px;
-    color: white;
+    color: var(--color-primario);
 }
 
 .buttons:hover, .play:hover  {
-    color: #0075ffbb;
+    color: var(--color-secundario);
 }
 
 .buttons:active, .play:active {
-    color: #0075ff50;
+    color: var(--color-secundario);
 }
 
 .play {
     font-size: 50px;
-    color: #0075ff;
+    color: var(--color-secundario);
     overflow: hidden;
 }
 
 .fa-circle-play {
     position: relative;
-    color: #0075ff;
+    color: var(--color-secundario);
     z-index: 1;
 }
 
@@ -177,7 +184,7 @@
     position: absolute;
     width: 79%;
     height: 95%;
-    background: white;
+    background: var(--color-primario);
     border-radius: 50%;
     top: 50%;
     left: 50%;
