@@ -14,7 +14,7 @@
     "name": "Alejandro Elias",
     "email": "alejandroelias@gmail.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^42.1.0",
     "electron-builder": "^26.8.1"
