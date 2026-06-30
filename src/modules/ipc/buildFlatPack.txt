@@ -1,0 +1,5 @@
+flatpak-builder --force-clean build-dir io.github.alejandroelias.NovaBeats.yml
+
+flatpak-builder --user --install --force-clean build-dir io.github.alejandroelias.NovaBeats.yml
+
+flatpak run io.github.alejandroelias.NovaBeats

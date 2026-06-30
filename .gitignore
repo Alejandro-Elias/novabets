@@ -1,4 +1,48 @@
-node_modules/
-package-lock.json/
-music/
+# =========================
+# Flatpak build artifacts
+# =========================
+.flatpak-builder/
+flatpak-build-dir/
+build-dir/
+repo/
+export/
+
+# =========================
+# Electron build output
+# =========================
 dist/
+out/
+release/
+*.AppImage
+*.deb
+
+# =========================
+# Node dependencies
+# =========================
+node_modules/
+
+# =========================
+# Logs
+# =========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Temporary / cache files
+# =========================
+*.log
+*.tmp
+*.cache

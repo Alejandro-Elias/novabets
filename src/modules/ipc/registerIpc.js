@@ -12,7 +12,19 @@ function registerIpc() {
 
     if (playList.length > 0) {
       for (const song of playList) {
-        const metadata = await mm.parseFile(song.track.ruta);
+        let metadata;
+
+        try {
+          metadata = await mm.parseFile(song.track.ruta);
+        } catch (error) {
+          console.warn(
+            "No se pudo leer metadata para:",
+            song.track?.ruta,
+            error?.message || error
+          );
+          continue;
+        }
+
         const picture = metadata.common.picture?.[0];
 
         let coverBuffer = null;
