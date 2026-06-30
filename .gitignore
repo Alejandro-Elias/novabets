@@ -6,6 +6,7 @@ flatpak-build-dir/
 build-dir/
 repo/
 export/
+config/
 
 # =========================
 # Electron build output

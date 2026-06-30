@@ -18,9 +18,6 @@ function carpetaALista() {
 
     const carpeta = resultado.filePaths[0];
 
-    console.log("Carpeta elegida:", carpeta);
-    console.log("Existe:", fs.existsSync(carpeta));
-
     console.warn("Carpeta seleccionada:", carpeta);
     console.warn("Existe carpeta?:", fs.existsSync(carpeta));
 
