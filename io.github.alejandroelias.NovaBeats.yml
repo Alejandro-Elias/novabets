@@ -1,4 +1,5 @@
 app-id: io.github.alejandroelias.NovaBeats
+
 runtime: org.freedesktop.Platform
 runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
@@ -12,31 +13,36 @@ finish-args:
   - --share=ipc
   - --socket=x11
   - --socket=wayland
-  - --device=all
   - --socket=pulseaudio
+
+  - --filesystem=home:ro
+  - --filesystem=/run/media
+  - --filesystem=/media
+  - --filesystem=/mnt
 
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.portal.Desktop
-  - --talk-name=org.freedesktop.portal.Audio
-  - --talk-name=org.freedesktop.portal.FileChooser
-  - --talk-name=org.freedesktop.portal.MediaDevices
-
-  - --filesystem=home
 
 modules:
   - name: novabeats
     buildsystem: simple
+
     build-commands:
       - mkdir -p /app/nova
 
-      - cp -r dist/linux-unpacked/* /app/nova/
+      - cp -r build /app/nova/
+      - cp package.json /app/nova/
 
       - install -Dm755 run.sh /app/bin/run.sh
 
-      - install -Dm644 io.github.alejandroelias.NovaBeats.desktop /app/share/applications/io.github.alejandroelias.NovaBeats.desktop
-      - install -Dm644 build/icon.png /app/share/icons/hicolor/512x512/apps/io.github.alejandroelias.NovaBeats.png
+      - install -Dm644 io.github.alejandroelias.NovaBeats.desktop \
+          /app/share/applications/io.github.alejandroelias.NovaBeats.desktop
 
-      - rm -f /app/nova/chrome-sandbox
+      - install -Dm644 io.github.alejandroelias.NovaBeats.metainfo.xml \
+          /app/share/metainfo/io.github.alejandroelias.NovaBeats.metainfo.xml
+
+      - install -Dm644 build/icon.png \
+          /app/share/icons/hicolor/512x512/apps/io.github.alejandroelias.NovaBeats.png
 
     sources:
       - type: dir
